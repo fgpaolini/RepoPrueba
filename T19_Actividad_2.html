@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIVIDIR Y MULTIPLICAR</title>
+    <style>
+
+/*         #numero{
+            border:solid 5px blue; 
+            width:200px; 
+            font-size:2rem; 
+            padding:20px; 
+            text-align:center;
+        }
+        #dividir, #duplicar{
+            width: 250px;
+            box-shadow:10px 10px 10px gray;
+            text-align:center;
+        }
+
+        #dividir:hover{
+            cursor: pointer;
+        } 
+        #duplicar:hover{
+            cursor: pointer;
+        } 
+        #numero:hover{
+            cursor: pointer;
+        } */
+
+        div {
+            display: flex;
+            border: 2px solid blue;
+            align-items: flex-start;
+            width:fit-content;
+            margin: 20px;
+            box-shadow:5px 5px 5px gray;
+        }
+        label {
+            font-size: 50px;
+        }
+    </style>
+    <script>
+        
+        function dividir() {
+            var num = document.getElementById("numero").innerText;
+           /*  alert(num); */
+            var division = num/2;
+            document.getElementById("numero").innerHTML = division;
+        }
+        function duplicar() {
+            var num = document.getElementById("numero").innerText;
+            /* alert(num); */
+            var duplicar = num*2;
+            document.getElementById("numero").innerHTML = duplicar;
+        }
+
+        function revertir200() {
+            document.getElementById("numero").innerHTML = "200";
+        }
+
+    </script>
+</head>
+<body>
+
+    <div>
+        <label onclick="revertir200()" for="numero" id="numero">
+            200
+        </label>
+    </div>
+    <input onclick="dividir()" type="button" value="Dividir">
+    <input onclick="duplicar()" type="button" value="Duplicar">
+
+</body>
+</html>

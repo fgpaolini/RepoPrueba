@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO ACTIVIDAD 1</title>
+    <style>
+        body {
+            font-family: arial, helvetica; }
+        form {
+            width: 600px; margin: 20px auto 0 auto;
+        }
+        label {
+            float: left; 
+            width: 200px; 
+            font-weight: bold;
+        }
+        label[for="registro condiciones"]{
+            float: none;
+        }
+        input[type="text"], 
+        input[type="password"], 
+        textarea {
+            width: 360px;
+        }
+        input[type="checkbox"] {
+            margin-left: 200px;
+        }
+        input[type="submit"] {
+            margin: 20px 0 0 200px; 
+            display: block;
+        }
+    </style>
+    <script>
+
+        function comprobar(){
+            var nom = document.getElementById("registro_nombre").value;
+            var email = document.getElementById("registro_email").value;
+            var com = document.getElementById("registro_comentarios").value;
+            var pass = document.getElementById("registro_password").value;
+            var checkbox = document.getElementById("registro_condiciones").checked;
+            /* alert(nom); */
+            var patron = /() () ()/
+            
+            if (nom == "" || email=="" || com=="") {
+                alert("Los campos Nombre, Email y Comentarios no pueden estar vacios");
+            }   
+            else if (!email.includes('@')) {
+                alert("El email no es correcto!");
+            }
+            else if (com.length > 50){
+                alert("El campo comentarios no puede superar los 50 caracteres");
+            }
+            else if (!checkbox){
+                alert("Debe aceptar las condiciones");
+            }
+
+        }
+/* 
+        function recorrerEmail(em) {
+
+
+        } */
+
+        function mensajeAlerta() {
+            alert("¡FORMULARIO INCORRECTO!");
+        }
+
+
+    </script>
+</head>
+<body>
+    <form action="" method="post" id="registro">
+        <fieldset>
+            <legend>Registro</legend>
+            <label for="registro_nombre">
+                Nombre:
+            </label>
+            <input type="text" name="nombre" id="registro_nombre">
+            <label for="registro apellidos">
+                Apellido:
+            </label>
+            <input type="text" name="apellido" id="registro_apellido">
+            <label for="registro_email">
+                Email:
+            </label>
+            <input type="text" name="email" id="registro_email">
+            <label for="registro_password">
+                Password:
+            </label>
+            <input type="password" name="password" id="registro_password">
+            <label for="registro_comentarios">
+                Comentarios:
+            </label>
+            <textarea name="comentarios" id="registro_comentarios" rows="5"> </textarea>
+            <input type="checkbox" name="condiciones" id="registro_condiciones" value="1">
+            <label for="registro_condiciones">
+                Acepto las condiciones del servicio.
+            </label>
+            <input onclick="comprobar()" type="submit" value="Enviar">
+        </fieldset>
+    </form>
+    <script> type="text/javascript" src="js/validator.js"</script>
+    <script> type="text/javascript" src="js/code.js"</script>
+</body>
+</html>

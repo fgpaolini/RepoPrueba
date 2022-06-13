@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORREOS ELECTRONICOS</title>
+    <script>
+        var nombre = prompt("Dime tu nombre:");
+        var pApellido = prompt("Dime tu primero apellido:");
+        var sApellido = prompt("Dime tu segundo apellido:");
+        var dominio = "@webmalagadesign.es";
+        document.write("<div>");
+        document.write("<h1>NOMBRE: " + nombre + " " + pApellido + " " + sApellido +"</h1>");
+        document.write("<ul><li>Correo: " + nombre.charAt(0) + pApellido + dominio + "</li>");
+        document.write("<li>Contraseña Temporal: " + nombre.toLowerCase().substring(0,1)  + sApellido.substring(0,1) + nombre.length + "_" + pApellido.charAt(5) + "</li></ul>");
+        document.write("</div>");
+    </script>
+</head>
+<body>
+    
+<!--     <h1>NOMBRE:</h1>
+        <hr>
+    <ol>
+        <li>Correo electrónico:</li>
+        <li>Contraseña temporal:</li> -->
+    </ol>
+</body>
+</html>

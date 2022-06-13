@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASO PRACTICO INICIAL</title>
+    <script>
+        function myFunction(xml) {
+            var x, i, xmlDoc, table;
+            xmlDoc = xml.responseXML;
+            table = "<tr><th>Nombre</th>"+
+            "<th>Libres</th></tr>";
+
+            x = xmlDoc.getElementsByTagName("entry")
+                for (i = 0; i < 10; i++) {
+                    table += "<tr><td>" +
+                    x[i].getElementsByTagName("nombre")[0]
+                    .childNodes[0].nodeValue +
+                    "</td><td style=text-align:right>" +
+
+                    x[i].getElementsByTagName("libres")[0]
+                    .childNodes[0].nodeValue +
+                    "</td></tr>"
+	}
+
+        document.getElementById("tabla")
+        .innerHTML = table;
+        fecha="Última fecha y hora: "
+        + x[0].getElementsByTagName
+        ("fechahoraultimaactualizacion")[0].
+        childNodes[0].nodeValue;
+
+        document.getElementById("fecha")
+        .innerHTML = fecha;
+    }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
